@@ -6,7 +6,7 @@ import os
 
 def get_hits_and_visits():
     location = os.path.realpath(os.getcwd())
-    file_name_input = input('Please provide file name (PLEASE NOTE: Unzipped file should be placed in '
+    file_name_input = input('Please provide file name (PLEASE NOTE: Unzipped file must be placed in '
                             f'"{os.path.realpath(os.path.join(os.getcwd()))}" directory) \n')
     file_path = os.path.join(location, file_name_input)
     hits_json = jsonlines.open(os.path.join(location, 'hits.json'), mode='w')
@@ -40,10 +40,10 @@ def get_hits_and_visits():
             visits_json.write(visit)
 
     hits_json.close()
-    print(f'Finished loading hits to {os.path.realpath(os.path.join(os.getcwd()))}/output/hits.json')
+    print(f'Finished loading hits to {os.path.realpath(os.path.join(os.getcwd()))}/hits.json')
 
     visits_json.close()
-    print(f'Finished loading visits to {os.path.realpath(os.path.join(os.getcwd()))}/output/visits.json')
+    print(f'Finished loading visits to {os.path.realpath(os.path.join(os.getcwd()))}/visits.json')
 
 
 if __name__ == '__main__':
