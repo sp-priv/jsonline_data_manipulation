@@ -25,7 +25,6 @@ def get_hits_and_visits():
                 one_hit["page_title"] = line["hits"][j]["page"]["pageTitle"]
                 one_hit["hostname"] = line["hits"][j]["page"]["hostname"]
                 one_hit["visit_id"] = line["visitId"]
-                one_hit["full_visitor_id"] = line["fullVisitorId"]
                 hits_json.write(one_hit)
             # while iterating through json lines (i.e GA visits) get information about visit and load it to vists.json
             visit = {}
