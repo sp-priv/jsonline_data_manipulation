@@ -1,4 +1,3 @@
-# run  pip3 install -r requirements.txt --user
 import jsonlines
 import datetime
 import os
